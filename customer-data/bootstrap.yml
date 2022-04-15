@@ -1,0 +1,7 @@
+spring:
+    data:
+        mongodb:
+            uri: mongodb+srv://jespinoza.is5j4.mongodb.net
+            database: customers
+            username: ${mongo_user}
+            password: ${mongo_password}
