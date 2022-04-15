@@ -2,6 +2,6 @@ spring:
     data:
         mongodb:
             uri: mongodb+srv://jespinoza.is5j4.mongodb.net
-            database: customers
+            database: ${mongo_database}
             username: ${mongo_user}
             password: ${mongo_password}
