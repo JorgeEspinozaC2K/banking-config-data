@@ -4,15 +4,3 @@ eureka:
   client: 
     service-url: 
       defaultZone: http://localhost:8091/eureka/
-spring:
-    data:
-        mongodb:
-            uri: mongodb+srv://jespinoza.is5j4.mongodb.net
-            database: ${mongo_database}
-            username: ${mongo_user}
-            password: ${mongo_password}
-management:
-  endpoints:
-    web:
-      exposure:
-        include: "*"
