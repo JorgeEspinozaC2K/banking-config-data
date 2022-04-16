@@ -3,7 +3,7 @@ server:
 eureka: 
   client: 
     service-url: 
-      defaultZone: http://localhost:8091/banking_discovery
+      defaultZone: http://localhost:8091/eureka/
 spring:
     data:
         mongodb:
