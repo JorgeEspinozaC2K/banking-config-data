@@ -11,3 +11,8 @@ spring:
             database: ${mongo_database}
             username: ${mongo_user}
             password: ${mongo_password}
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
