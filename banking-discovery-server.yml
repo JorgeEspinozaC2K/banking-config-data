@@ -10,3 +10,8 @@ eureka:
     fetch-registry: false
     service-url: 
       defaultZone: http://localhost:8091/eureka/
+management:
+    endpoints:
+        web:
+          exposure:
+             include: "*"
