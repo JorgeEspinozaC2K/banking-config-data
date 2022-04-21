@@ -12,7 +12,7 @@ spring:
                     enabled: true
             routes:
               - id: banking-customer-service
-                uri: lb://banking-customer-service
+                uri: lb://BANKING-CUSTOMER-SERVICE
                 predicates:
                   - Path=/customer/**
               - id: banking-account-service
