@@ -7,5 +7,5 @@ eureka:
 management:
     endpoint:
         web:
-            exposure:
-                include: "*"
+          exposure:
+             include: "*"
