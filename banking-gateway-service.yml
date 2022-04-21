@@ -16,30 +16,30 @@ spring:
                 predicates:
                   - Path=/customer/**
               - id: banking-account-service
-                uri: http://localhost:8083/api/v1/account
+                uri: http://localhost:8083/account
                 predicates:
                   - Path=/account/**
               - id: banking-credit-service
-                uri: http://localhost:8084/api/v1/credit
+                uri: http://localhost:8084/credit
                 predicates:
                   - Path=/credit/**
               - id: banking-card-service
-                uri: http://localhost:8085/api/v1/card
+                uri: http://localhost:8085/card
                 predicates:
                   - Path=/card/**
               - id: banking-deposit-service
-                uri: http://localhost:8086/api/v1/deposit
+                uri: http://localhost:8086/deposit
                 predicates:
                   - Path=/deposit/**
               - id: banking-witdrawal-service
-                uri: http://localhost:8087/api/v1/witdrawal
+                uri: http://localhost:8087/witdrawal
                 predicates:
                   - Path=/witdrawal/**
               - id: banking-transaction-service
-                uri: http://localhost:8088/api/v1/transaction
+                uri: http://localhost:8088/transaction
                 predicates:
                   - Path=/transaction/**
               - id: banking-payment-service
-                uri: http://localhost:8089/api/v1/payment
+                uri: http://localhost:8089/payment
                 predicates:
                   - Path=/payment/**
