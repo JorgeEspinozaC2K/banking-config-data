@@ -1,6 +1,45 @@
 server: 
-  port: 8200
+  port: 8080
 eureka: 
   client: 
     service-url: 
       defaultZone: http://localhost:8091/eureka/
+spring:
+    cloud:
+        gateway:
+            discovery:
+                locator:
+                    enabled: true
+            routes:
+              - id: banking-customer-service
+                uri: lb://banking-customer-service
+                predicates:
+                  - Path=/customer/**
+              - id: banking-account-service
+                uri: lb://banking-account-service
+                predicates:
+                  - Path=/account/**
+              - id: banking-credit-service
+                uri: lb://banking-credit-service
+                predicates:
+                  - Path=/credit/**
+              - id: banking-card-service
+                uri: lb://banking-card-service
+                predicates:
+                  - Path=/card/**
+              - id: banking-deposit-service
+                uri: lb://banking-deposit-service
+                predicates:
+                  - Path=/deposit/**
+              - id: banking-witdrawal-service
+                uri: lb://banking-witdrawal-service
+                predicates:
+                  - Path=/witdrawal/**
+              - id: banking-transaction-service
+                uri: lb://banking-transaction-service
+                predicates:
+                  - Path=/transaction/**
+              - id: banking-payment-service
+                uri: lb://banking-payment-service
+                predicates:
+                  - Path=/payment/**
