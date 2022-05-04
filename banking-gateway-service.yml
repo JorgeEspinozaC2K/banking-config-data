@@ -4,6 +4,20 @@ eureka:
   client: 
     service-url: 
       defaultZone: http://localhost:8091/eureka/
+      
+logging:
+ file: 
+   name: log/GatewayService.log     
+ pattern:
+   console: "%d [%thread] %-5level %-60logger{40} : %msg%n"
+ logback:
+    rollingpolicy:
+      max-file-size: 1MB   
+      file-name-pattern: log/GatewayService.%d{yyyy-MM-dd}.%i.log
+      total-size-cap: 11MB
+      max-history: 10
+      clean-history-on-start: true
+
 spring:
     cloud:
         gateway:
