@@ -16,11 +16,14 @@ logging:
       total-size-cap: 11MB
       clean-history-on-start: true
       max-history: 10    
-eureka: 
+eureka:
+  instance:
+    prefer-ip-addres: true
   client: 
     service-url: 
       defaultZone: http://localhost:8091/eureka/
-    instance-id: ${spring.application.name}:${spring.application.instance_id:${random.value}}
+    instance:
+        instance-id: ${spring.application.name}:${spring.application.instance_id:${random.value}}
 management:
     endpoints:
         web:
