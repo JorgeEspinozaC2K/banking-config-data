@@ -35,6 +35,7 @@ resilience4j.circuitbreaker:
             registerHealthIndicator: true
     instances:
         accountCB:
+            baseConfig: default
             failureRateThreshold: 50
             minimumNumberOfCalls: 10
             slidingWindowType: TIME_BASED
@@ -42,6 +43,7 @@ resilience4j.circuitbreaker:
             waitDurationInOpenState: 2s
             permittedNumberOfCallsInHalfOpenState: 3
         creditCB:
+            baseConfig: default
             failureRateThreshold: 50
             minimumNumberOfCalls: 10
             slidingWindowType: TIME_BASED
@@ -49,6 +51,7 @@ resilience4j.circuitbreaker:
             waitDurationInOpenState: 2s
             permittedNumberOfCallsInHalfOpenState: 3
         cardCB:
+            baseConfig: default
             failureRateThreshold: 50
             minimumNumberOfCalls: 10
             slidingWindowType: TIME_BASED
@@ -56,6 +59,7 @@ resilience4j.circuitbreaker:
             waitDurationInOpenState: 2s
             permittedNumberOfCallsInHalfOpenState: 3
         allCB:
+            baseConfig: default
             failureRateThreshold: 50
             minimumNumberOfCalls: 10
             slidingWindowType: TIME_BASED
