@@ -1,5 +1,5 @@
 server: 
-  port: ${PORT:${SERVER_PORT}}
+  port: ${PORT:${SERVER_PORT:0}}
 spring:
   data:
       mongodb:
@@ -16,11 +16,14 @@ logging:
       total-size-cap: 11MB
       max-history: 10
       clean-history-on-start: true      
-eureka: 
+eureka:
+  instance:
+    prefer-ip-addres: true
   client: 
     service-url: 
       defaultZone: http://localhost:8091/eureka/
-    instance-id: ${spring.application.name}:${spring.application.instance_id:${random.value}}
+    instance:
+        instance-id: ${spring.application.name}:${spring.application.instance_id:${random.value}}
 management:
     endpoints:
         web:

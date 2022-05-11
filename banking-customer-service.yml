@@ -32,38 +32,30 @@ management:
 resilience4j.circuitbreaker:
     instances:
         accountCB:
-            registerHealthIndicator: true
-            slidingWindowSize: 10
-            permittedNumberOfCallsInHalfOpenState: 3
-            slidingWindowType: TIME_BASED
-            minimumNumberOfCalls: 4
-            waitDurationInOpenState: 2s
             failureRateThreshold: 50
-            eventConsumerBufferSize: 10
+            minimumNumberOfCalls: 10
+            slidingWindowType: TIME_BASED
+            slidingWindowSize: 10
+            waitDurationInOpenState: 2s
+            permittedNumberOfCallsInHalfOpenState: 3
         creditCB:
-            registerHealthIndicator: true
-            slidingWindowSize: 10
-            permittedNumberOfCallsInHalfOpenState: 3
-            slidingWindowType: TIME_BASED
-            minimumNumberOfCalls: 4
-            waitDurationInOpenState: 2s
             failureRateThreshold: 50
-            eventConsumerBufferSize: 10
+            minimumNumberOfCalls: 10
+            slidingWindowType: TIME_BASED
+            slidingWindowSize: 10
+            waitDurationInOpenState: 2s
+            permittedNumberOfCallsInHalfOpenState: 3
         cardCB:
-            registerHealthIndicator: true
-            slidingWindowSize: 10
-            permittedNumberOfCallsInHalfOpenState: 3
-            slidingWindowType: TIME_BASED
-            minimumNumberOfCalls: 4
-            waitDurationInOpenState: 2s
             failureRateThreshold: 50
-            eventConsumerBufferSize: 10
+            minimumNumberOfCalls: 10
+            slidingWindowType: TIME_BASED
+            slidingWindowSize: 10
+            waitDurationInOpenState: 2s
+            permittedNumberOfCallsInHalfOpenState: 3
         allCB:
-            registerHealthIndicator: true
-            slidingWindowSize: 10
-            permittedNumberOfCallsInHalfOpenState: 3
-            slidingWindowType: TIME_BASED
-            minimumNumberOfCalls: 4
-            waitDurationInOpenState: 2s
             failureRateThreshold: 50
-            eventConsumerBufferSize: 10
+            minimumNumberOfCalls: 10
+            slidingWindowType: TIME_BASED
+            slidingWindowSize: 10
+            waitDurationInOpenState: 2s
+            permittedNumberOfCallsInHalfOpenState: 3

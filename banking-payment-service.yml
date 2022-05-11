@@ -1,9 +1,13 @@
 server: 
-  port: ${PORT:${SERVER_PORT}}
-spring:
-  data:
-      mongodb:
-          uri: mongodb+srv://jespinoza:jest444@jespinoza.is5j4.mongodb.net/payment_data
+  port: ${PORT:${SERVER_PORT:0}}
+eureka:
+  instance:
+    prefer-ip-addres: true
+  client: 
+    service-url: 
+      defaultZone: http://localhost:8091/eureka/
+    instance:
+        instance-id: ${spring.application.name}:${spring.application.instance_id:${random.value}}
 logging:
   file:
     name: log/CustomerService.log

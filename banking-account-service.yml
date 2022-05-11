@@ -1,10 +1,13 @@
 server: 
-  port: ${PORT:${SERVER_PORT}}
-eureka: 
+  port: ${PORT:${SERVER_PORT:0}}
+eureka:
+  instance:
+    prefer-ip-addres: true
   client: 
     service-url: 
       defaultZone: http://localhost:8091/eureka/
-    instance-id: ${spring.application.name}:${spring.application.instance_id:${random.value}}
+    instance:
+        instance-id: ${spring.application.name}:${spring.application.instance_id:${random.value}}
 spring:
   data:
     mongodb:
