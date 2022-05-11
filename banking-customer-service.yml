@@ -30,6 +30,9 @@ management:
           exposure:
             include: "*"
 resilience4j.circuitbreaker:
+    configs:
+        default:
+            registerHealthIndicator: true
     instances:
         accountCB:
             failureRateThreshold: 50
