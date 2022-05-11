@@ -1,15 +1,14 @@
 server: 
-  port: 8087
+  port: ${PORT:${SERVER_PORT}}
 eureka: 
   client: 
     service-url: 
       defaultZone: http://localhost:8091/eureka/
-      
+    instance-id: ${spring.application.name}:${spring.application.instance_id:${random.value}}
 spring:
   data:
     mongodb:
       uri: mongodb+srv://jespinoza:jest444@jespinoza.is5j4.mongodb.net/witdrawal_data
-      
 logging:
   file:
     name: log/WitdrawalService.log
@@ -22,7 +21,6 @@ logging:
       total-size-cap: 11MB
       clean-history-on-start: true
       max-history: 10
-      
 management:
     endpoints:
         web:

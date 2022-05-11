@@ -1,15 +1,14 @@
 server: 
-  port: 8088
+  port: ${PORT:${SERVER_PORT}}
 eureka: 
   client: 
     service-url: 
       defaultZone: http://localhost:8091/eureka/
-
+    instance-id: ${spring.application.name}:${spring.application.instance_id:${random.value}}
 spring:
   data:
     mongodb:
       uri: mongodb+srv://jespinoza:jest444@jespinoza.is5j4.mongodb.net/transaction_data
-
 logging:
   file:
     name: log/TransactionService.log
@@ -22,8 +21,7 @@ logging:
       file-name-pattern: log/TransactionService.%d{yyyy-MM-dd}.%i.log
       total-size-cap: 11MB
       max-history: 10
-      clean-history-on-start: true
-      
+      clean-history-on-start: true  
 management:
     endpoints:
         web:
