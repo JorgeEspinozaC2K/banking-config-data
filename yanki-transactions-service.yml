@@ -42,3 +42,8 @@ resilience4j.circuitbreaker:
             slidingWindowSize: 10
             waitDurationInOpenState: 20s
             permittedNumberOfCallsInHalfOpenState: 3
+kafka:
+    producer:
+      bootstrap-servers: localhost:29092
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.apache.kafka.common.serialization.StringSerializer
