@@ -55,3 +55,11 @@ spring:
                 uri: lb://banking-payment-service
                 predicates:
                   - Path=/payment/**
+              - id: yanki-account-service
+                uri: lb://yanki-account-service
+                predicates:
+                  - Path=/yanki/account/**
+              - id: yanki-transaction-service
+                uri: lb://yanki-transaction-service
+                predicates:
+                  - Path=/yanki/transaction/**
